@@ -1,0 +1,12 @@
+* GCP BASICS
+To use gcp via cli please install google cloud cli
+You can install the cli using this link [[here][https://cloud.google.com/sdk/docs/install]].
+
+To learn docker swarm you need to create two compute engines. You can create multiple instances of computes engine,but two are required.
+** creating compute engine in GCPs
+    - create two compute engine #+BEGIN_EXAMPL#+BEGIN_EXAMPLE 
+        - manager-node 
+        - worker-node
+    #+END_EXAMPLE
+    - Taking ssh access to user and also sudo access in GCP [[][here]]
+    
