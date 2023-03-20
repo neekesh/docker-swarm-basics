@@ -1,3 +1,3 @@
-* Docker Swarm
+* Info
 
-** this repo includes the scrioptsto runteh docker swaarm in any wo machines.
+** This repo deatls with the basics of GCP to run docker swarm and gives you the general knowledege about docker swarm and GCP.
