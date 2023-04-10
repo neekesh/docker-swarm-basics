@@ -4,9 +4,30 @@ You can install the cli using this link [[here][https://cloud.google.com/sdk/doc
 
 To learn docker swarm you need to create two compute engines. You can create multiple instances of computes engine,but two are required.
 ** creating compute engine in GCPs
-    - create two compute engine #+BEGIN_EXAMPL#+BEGIN_EXAMPLE 
+    - create two compute engine
+     #+BEGIN_EXAMPLE
         - manager-node 
         - worker-node
     #+END_EXAMPLE
     - Taking ssh access to user and also sudo access in GCP [[][here]]
+
+** getting access to the conatainer registry in gcloud
+    #+BEGIN_CONTAINER
+        gcloud config set project project_name # set project name
+        gcloud services enable containerregistry.googleapis.com # enables container regisstry
+    #+END_CONTAINER
+
+** google cloud cli to generate service keys json
+    #+BEGIN_SERVICE
+        gcloud auth login
+        gcloud iam service-accounts keys create KEY_FILE_name --iam-account=SA_NAME@PROJECT_ID.iam.gserviceaccount.com
+        
+    #+END_SERVICE
+
+** after thes commands we need  to give docker group to the curernt user
+#+BEGIN_SERVICE
+    sudo usermod -a -G docker ${USER}
+    gcloud auth configure-docker
+ #+END_SERVICE
+
     
